@@ -1,0 +1,15 @@
+# notebooks
+/courses
+/datasets
+/examples
+/experiments
+/interview
+/libs
+/libs-my
+/rnd
+/venv
+
+# env
+.idea
+github-token.txt
+

@@ -1,0 +1,9 @@
+# gym[atari,box2d,classic_control]==0.10.5
+# it seems already installed
+# imageio==2.3.0
+# pyglet==1.2.4
+simhash
+
+# https://github.com/jd/tenacity
+# retrying library
+tenacity==5.0.2

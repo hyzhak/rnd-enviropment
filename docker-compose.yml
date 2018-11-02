@@ -1,0 +1,20 @@
+version: '2.3'
+# we should use 2.3
+# https://github.com/docker/compose/issues/5360#issuecomment-354354667
+
+services:
+  ai:
+    build: .
+#    command: /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --allow-root --ip='*' --port=8888 --no-browser
+    ports:
+    # jupyter
+      - "8888:8888"
+    # TODO: move to dedicated container (we could share volume with data to it)
+    # tensorboard
+      - "6006:6006"
+    volumes:
+      - .:/opt/notebooks/
+      - /var/datasets/:/var/datasets/
+      # we would store checkpoints and event files here
+      - /var/models/:/var/models/
+    runtime: nvidia
