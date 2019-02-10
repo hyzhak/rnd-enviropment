@@ -2,7 +2,10 @@
 # it seems already installed
 # imageio==2.3.0
 # pyglet==1.2.4
+beautifulsoup4==4.7.1
+scrapy==1.6.0
 simhash
+surt==0.3.0
 
 # https://github.com/jd/tenacity
 # retrying library
