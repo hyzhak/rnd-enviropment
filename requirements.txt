@@ -9,6 +9,7 @@ descartes==1.1.0 # is used by geopandas
 osmnx==0.9 # Retrieve, construct, analyze, and visualize street networks from OpenStreetMap
 overpass==0.6.1 # overpass api to make db-like queries to open street map data
 geopandas==0.4.0
+regex==2018.01.10 # is required by spacy
 scrapy==1.6.0
 simhash
 surt==0.3.0
