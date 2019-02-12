@@ -4,6 +4,7 @@
 # pyglet==1.2.4
 beautifulsoup4==4.7.1
 datasketch==1.4.1
+descartes==1.1.0 # is used by geopandas
 geopandas==0.4.0
 scrapy==1.6.0
 simhash
