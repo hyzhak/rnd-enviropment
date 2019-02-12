@@ -5,6 +5,16 @@ ENV PYTHONPATH /opt/notebooks
 
 WORKDIR /opt/notebooks
 
+# is required by "cartopy"
+# https://github.com/SciTools/cartopy/issues/1239
+# "cartopy" is required by "contextily" to show tiles in "geopandas"
+RUN apt-get update && apt-get install -y \
+        libproj-dev \
+  && apt-get clean \
+  && apt-get autoremove \
+  && rm -rf /var/cache/apt/archives/* \
+  && rm -rf /var/lib/apt/lists/*
+
 COPY requirements.txt /opt/notebooks/
 RUN pip install --upgrade pip \
  && pip install --default-timeout=1000 --no-cache-dir -r requirements.txt
