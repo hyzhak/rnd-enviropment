@@ -3,6 +3,7 @@
 # imageio==2.3.0
 # pyglet==1.2.4
 beautifulsoup4==4.7.1
+contextily==0.99.0 # retrieve and write to disk tile maps from the internet into geospatial raster files (OSM)
 datasketch==1.4.1
 descartes==1.1.0 # is used by geopandas
 osmnx==0.9 # Retrieve, construct, analyze, and visualize street networks from OpenStreetMap
