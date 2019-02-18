@@ -1,4 +1,4 @@
-FROM floydhub/pytorch:1.0.0-gpu.cuda9cudnn7-py3.37
+FROM floydhub/pytorch:1.0.0-gpu.cuda9cudnn7-py3.40
 
 ENV SCIKIT_LEARN_DATA /var/datasets/scikit_learn_data
 ENV PYTHONPATH /opt/notebooks
@@ -10,6 +10,7 @@ WORKDIR /opt/notebooks
 # "cartopy" is required by "contextily" to show tiles in "geopandas"
 RUN apt-get update && apt-get install -y \
         libproj-dev \
+        python3-rtree \
   && apt-get clean \
   && apt-get autoremove \
   && rm -rf /var/cache/apt/archives/* \
@@ -17,6 +18,11 @@ RUN apt-get update && apt-get install -y \
 
 COPY requirements.txt /opt/notebooks/
 RUN pip install --upgrade pip \
+ # solve issue
+ # ValueError: numpy.ufunc size changed, may indicate binary incompatibility. Expected 216 from C header, got 192 from PyObject
+ # similar issue
+ # https://stackoverflow.com/questions/40845304/runtimewarning-numpy-dtype-size-changed-may-indicate-binary-incompatibility
+# && pip install --no-binary :all: cartopy contextily \
  && pip install --default-timeout=1000 --no-cache-dir -r requirements.txt
 
 # FIXME:
