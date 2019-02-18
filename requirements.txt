@@ -7,6 +7,7 @@ cartopy==0.16.0
 contextily==0.99.0 # retrieve and write to disk tile maps from the internet into geospatial raster files (OSM)
 datasketch==1.4.1
 descartes==1.1.0 # is used by geopandas
+joypy==v0.1.10 # joy division like visualization in matplotlib
 osmnx==0.9 # Retrieve, construct, analyze, and visualize street networks from OpenStreetMap
 overpass==0.6.1 # overpass api to make db-like queries to open street map data
 geopandas==0.4.0
