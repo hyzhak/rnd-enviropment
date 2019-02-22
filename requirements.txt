@@ -4,6 +4,7 @@
 # pyglet==1.2.4
 beautifulsoup4==4.7.1
 cartopy==0.16.0
+catboost==0.12.2 # A fast, scalable, high performance Gradient Boosting on Decision Trees library, used for ranking, classification, regression
 contextily==0.99.0 # retrieve and write to disk tile maps from the internet into geospatial raster files (OSM)
 datasketch==1.4.1
 descartes==1.1.0 # is used by geopandas
