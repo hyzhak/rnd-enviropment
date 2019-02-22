@@ -16,6 +16,7 @@ regex==2018.01.10 # is required by spacy
 scrapy==1.6.0
 simhash
 surt==0.3.0
+xgboost==0.81 # Scalable, Portable and Distributed Gradient Boosting (GBDT, GBRT or GBM) Library
 
 # https://github.com/jd/tenacity
 # retrying library
