@@ -8,6 +8,7 @@ contextily==0.99.0 # retrieve and write to disk tile maps from the internet into
 datasketch==1.4.1
 descartes==1.1.0 # is used by geopandas
 joypy==v0.1.10 # joy division like visualization in matplotlib
+lightgbm==2.2.3 # A fast, distributed, high performance gradient boosting (GBDT, GBRT, GBM or MART)
 osmnx==0.9 # Retrieve, construct, analyze, and visualize street networks from OpenStreetMap
 overpass==0.6.1 # overpass api to make db-like queries to open street map data
 geopandas==0.4.0
