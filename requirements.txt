@@ -9,11 +9,12 @@ contextily==0.99.0 # retrieve and write to disk tile maps from the internet into
 datasketch==1.4.1
 descartes==1.1.0 # is used by geopandas
 joypy==v0.1.10 # joy division like visualization in matplotlib
+geopandas==0.4.0
 lightgbm==2.2.3 # A fast, distributed, high performance gradient boosting (GBDT, GBRT, GBM or MART)
 newspaper3k==0.2.8 # Article scraping & curation
 osmnx==0.9 # Retrieve, construct, analyze, and visualize street networks from OpenStreetMap
 overpass==0.6.1 # overpass api to make db-like queries to open street map data
-geopandas==0.4.0
+pydotplus==2.0.2 # Python interface to Graphviz's Dot language
 regex==2018.01.10 # is required by spacy
 scrapy==1.6.0
 simhash
