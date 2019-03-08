@@ -8,6 +8,7 @@ catboost==0.12.2 # A fast, scalable, high performance Gradient Boosting on Decis
 contextily==0.99.0 # retrieve and write to disk tile maps from the internet into geospatial raster files (OSM)
 datasketch==1.4.1
 descartes==1.1.0 # is used by geopandas
+joblib==0.13.2 # lightweight pipelining (parallel computing and transparent disk-caching of functions and lazy re-evaluation)
 joypy==v0.1.10 # joy division like visualization in matplotlib
 geopandas==0.4.0
 lightgbm==2.2.3 # A fast, distributed, high performance gradient boosting (GBDT, GBRT, GBM or MART)
