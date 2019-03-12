@@ -10,6 +10,7 @@ datasketch==1.4.1
 descartes==1.1.0 # is used by geopandas
 joblib==0.13.2 # lightweight pipelining (parallel computing and transparent disk-caching of functions and lazy re-evaluation)
 joypy==v0.1.10 # joy division like visualization in matplotlib
+jgraph==0.2.1 # An embeddable webGL graph visualization library.
 geopandas==0.4.0
 lightgbm==2.2.3 # A fast, distributed, high performance gradient boosting (GBDT, GBRT, GBM or MART)
 newspaper3k==0.2.8 # Article scraping & curation
