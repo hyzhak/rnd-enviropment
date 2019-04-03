@@ -17,10 +17,10 @@ gensim==3.7.1 # unsupervised topic modeling and natural language processing
 geopandas==0.4.0
 lightgbm==2.2.3 # A fast, distributed, high performance gradient boosting (GBDT, GBRT, GBM or MART)
 newspaper3k==0.2.8 # Article scraping & curation
+numpy-quaternion=1.15.4 # adds a quaternion dtype to NumPy
 osmnx==0.9 # Retrieve, construct, analyze, and visualize street networks from OpenStreetMap
 overpass==0.6.1 # overpass api to make db-like queries to open street map data
 pydotplus==2.0.2 # Python interface to Graphviz's Dot language
-quaternion=0.3.1 # adds a quaternion dtype to NumPy
 regex==2018.01.10 # is required by spacy
 scrapy==1.6.0
 simhash
