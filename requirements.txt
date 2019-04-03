@@ -25,6 +25,7 @@ regex==2018.01.10 # is required by spacy
 scrapy==1.6.0
 simhash
 surt==0.3.0
+torchbiggraph # A distributed system to learn embeddings of large graphs
 xgboost==0.81 # Scalable, Portable and Distributed Gradient Boosting (GBDT, GBRT or GBM) Library
 
 # https://github.com/jd/tenacity
