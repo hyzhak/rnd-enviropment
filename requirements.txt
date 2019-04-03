@@ -3,11 +3,13 @@
 # imageio==2.3.0
 # pyglet==1.2.4
 beautifulsoup4==4.7.1
+bokeh
 cartopy==0.16.0
 catboost==0.12.2 # A fast, scalable, high performance Gradient Boosting on Decision Trees library, used for ranking, classification, regression
 contextily==0.99.0 # retrieve and write to disk tile maps from the internet into geospatial raster files (OSM)
 datasketch==1.4.1
 descartes==1.1.0 # is used by geopandas
+ipyvolume # draw 3d in jupyter
 joblib==0.13.2 # lightweight pipelining (parallel computing and transparent disk-caching of functions and lazy re-evaluation)
 joypy==v0.1.10 # joy division like visualization in matplotlib
 jgraph==0.2.1 # An embeddable webGL graph visualization library.
@@ -18,6 +20,7 @@ newspaper3k==0.2.8 # Article scraping & curation
 osmnx==0.9 # Retrieve, construct, analyze, and visualize street networks from OpenStreetMap
 overpass==0.6.1 # overpass api to make db-like queries to open street map data
 pydotplus==2.0.2 # Python interface to Graphviz's Dot language
+quaternion=0.3.1 # adds a quaternion dtype to NumPy
 regex==2018.01.10 # is required by spacy
 scrapy==1.6.0
 simhash
@@ -27,4 +30,6 @@ xgboost==0.81 # Scalable, Portable and Distributed Gradient Boosting (GBDT, GBRT
 # https://github.com/jd/tenacity
 # retrying library
 tenacity==5.0.2
+# doesn't work on python3 :( and fails with error:
+# vaex==0.3.10 # Out-of-Core DataFrames for Python, visualize and explore big tabular data at a billion rows per second.
 wordcloud==1.5.0 # word cloud generator

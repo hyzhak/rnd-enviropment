@@ -14,6 +14,7 @@ services:
     volumes:
       - .:/opt/notebooks/
       - /var/datasets/:/var/datasets/
+      - ~/.kaggle:/root/.kaggle
       # we would store checkpoints and event files here
       - /var/models/:/var/models/
     runtime: nvidia

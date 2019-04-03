@@ -23,7 +23,9 @@ RUN pip install --upgrade pip \
  # similar issue
  # https://stackoverflow.com/questions/40845304/runtimewarning-numpy-dtype-size-changed-may-indicate-binary-incompatibility
 # && pip install --no-binary :all: cartopy contextily \
- && pip install --default-timeout=1000 --no-cache-dir -r requirements.txt
+ && pip install --default-timeout=1000 --no-cache-dir -r requirements.txt \
+# stable version doesn't for on python3 :(
+ && pip install --pre vaex
 
 # FIXME:
 # install all libs-my (which are under development)
