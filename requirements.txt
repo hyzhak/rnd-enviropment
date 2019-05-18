@@ -2,6 +2,7 @@
 # it seems already installed
 # imageio==2.3.0
 # pyglet==1.2.4
+apache-airflow # a platform to programmatically author, schedule and monitor workflows
 beautifulsoup4==4.7.1
 bokeh
 cartopy==0.16.0
