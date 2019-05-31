@@ -19,6 +19,7 @@ geopandas==0.4.0
 lightgbm==2.2.3 # A fast, distributed, high performance gradient boosting (GBDT, GBRT, GBM or MART)
 luigi==2.8.3 # helps you build complex pipelines of batch jobs. It handles dependency resolution, workflow management, visualization etc. It also comes with Hadoop support built in.
 mlflow==0.9.1 # platform for the machine learning lifecycle
+mrcnn # Mask R-CNN for object detection and instance segmentation on Keras and TensorFlow
 newspaper3k==0.2.8 # Article scraping & curation
 numpy-quaternion # adds a quaternion dtype to NumPy
 osmnx==0.9 # Retrieve, construct, analyze, and visualize street networks from OpenStreetMap
