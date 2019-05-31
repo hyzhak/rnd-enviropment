@@ -4,7 +4,7 @@ FROM python:3.6
 #
 # pip install tensorboard
 #
-# doesn't work because tensorboard requires tesorflow
+# doesn't work because tensorboard requires tensorflow
 # so we should install both
 
 RUN pip install --upgrade pip \

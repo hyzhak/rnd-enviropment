@@ -6,9 +6,11 @@ services:
   ai:
     build: .
 #    command: /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --allow-root --ip='*' --port=8888 --no-browser
+    depends_on:
+      - luigi_scheduler
     environment:
+    - LUIGI_CORE_DEFAULT-SCHEDULER-URL=http://scheduler:8082
     - NLTK_DATA=/var/datasets/nltk
-
     ports:
       - "8888:8888"
     volumes:
@@ -19,6 +21,28 @@ services:
       - /var/models/:/var/models/
     runtime: nvidia
 #    user: ${CURRENT_UID}
+
+# TODO: setup db later
+#
+#  db:
+#    image: postgres:9.5.4
+#    ports:
+#      - "5433:5432"
+#    environment:
+#      POSTGRES_USER: luigi
+#      POSTGRES_DB: dev
+
+  luigi_scheduler:
+    build:
+      context: luigi-scheduler
+      dockerfile: Dockerfile
+    ports:
+      - "8082:8082"
+#    depends_on:
+#      - db
+#    entrypoint:
+#      - ./wait-for-postgres.sh
+#      - db
 
   tfboard:
     build:
