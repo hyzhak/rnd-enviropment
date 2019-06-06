@@ -8,8 +8,10 @@ services:
 #    command: /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --allow-root --ip='*' --port=8888 --no-browser
     depends_on:
       - luigi_scheduler
+      - mlflow_server
     environment:
     - LUIGI_CORE_DEFAULT-SCHEDULER-URL=http://scheduler:8082
+    - MLFLOW_TRACKING_URI=http://mlflow_server:5000
     - NLTK_DATA=/var/datasets/nltk
     ports:
       - "8888:8888"
@@ -43,6 +45,20 @@ services:
 #    entrypoint:
 #      - ./wait-for-postgres.sh
 #      - db
+
+  mlflow_server:
+    build:
+      context: mlflow-server
+      dockerfile: Dockerfile
+    environment:
+      - PATH_TO_ARTIFACTS=/artifacts
+      - PATH_TO_TRACKING=/tracking
+      - MLFLOW_PORT=5000
+    volumes:
+      - /var/metrics/mlflow/artifacts:/artifacts
+      - /var/metrics/mlflow/tracking:/tracking
+    ports:
+      - "5000:5000"
 
   tfboard:
     build:
