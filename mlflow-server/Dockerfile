@@ -7,6 +7,11 @@ FROM python:${PYTHON_VERSION}-alpine
 ENV PYTHON_VERSION ${PYTHON_VERSION}
 
 # Install all needed deps to install and compile numpy and pandas
+# list of deps got from:
+# https://github.com/publysher/docker-alpine-numpy/blob/master/Dockerfile
+# and
+# https://github.com/amancevice/docker-pandas/blob/master/alpine/Dockerfile
+
 RUN apk add --no-cache python3-dev libstdc++ && \
     apk add --no-cache --virtual .build-deps g++ && \
     apk add --no-cache --virtual .builddeps gcc gfortran musl-dev && \
