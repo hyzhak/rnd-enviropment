@@ -32,5 +32,7 @@ VOLUME ["${LUIGI_CONFIG_DIR}", "${LUIGI_STATE_DIR}"]
 
 EXPOSE 8082/TCP
 
+WORKDIR /bin
 COPY luigid.sh /bin/run
+#COPY ../bin/generate_config.py /bin/
 ENTRYPOINT ["/bin/run"]

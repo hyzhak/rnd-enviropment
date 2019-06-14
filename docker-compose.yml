@@ -10,7 +10,6 @@ services:
       - luigi_scheduler
       - mlflow_server
     environment:
-    - LUIGI_CORE_DEFAULT-SCHEDULER-URL=http://scheduler:8082
     - MLFLOW_TRACKING_URI=http://mlflow_server:5000
     - NLTK_DATA=/var/datasets/nltk
     ports:

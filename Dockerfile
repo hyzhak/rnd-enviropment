@@ -32,6 +32,8 @@ RUN pip install --upgrade pip \
 ADD libs-my /opt/notebooks/libs-my
 RUN pip install -e /opt/notebooks/libs-my/tfdatasets
 
+COPY configs/luigi.cfg /etc/luigi/luigi.cfg
+
 # TODO:
 # 1. maybe we should use some more general group and user name
 # 2. has permission problem (PermissionError: [Errno 13] Permission denied: '/home/eugene')
