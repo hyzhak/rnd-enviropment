@@ -19,6 +19,9 @@ services:
       - .:/opt/notebooks/
       - /var/datasets/:/var/datasets/
       - ~/.kaggle:/root/.kaggle
+      # gensim has hardcoded place of its data (pretrained model)
+      # https://github.com/RaRe-Technologies/gensim/blob/master/gensim/downloader.py#L66
+      - /var/datasets/gensim-data:/root/gensim-data
       # we would store checkpoints and event files here
       - /var/models/:/var/models/
     runtime: nvidia

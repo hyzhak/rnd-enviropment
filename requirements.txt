@@ -9,8 +9,10 @@ bokeh
 cartopy==0.16.0
 catboost==0.12.2 # A fast, scalable, high performance Gradient Boosting on Decision Trees library, used for ranking, classification, regression
 contextily==0.99.0 # retrieve and write to disk tile maps from the internet into geospatial raster files (OSM)
+dask[complete] #
 datasketch==1.4.1
 descartes==1.1.0 # is used by geopandas
+hyperopt # Distributed Asynchronous Hyperparameter Optimization in Python
 ipyvolume # draw 3d in jupyter
 joblib==0.13.2 # lightweight pipelining (parallel computing and transparent disk-caching of functions and lazy re-evaluation)
 joypy==v0.1.10 # joy division like visualization in matplotlib
@@ -19,7 +21,7 @@ gensim==3.7.1 # unsupervised topic modeling and natural language processing
 geopandas==0.4.0
 lightgbm==2.2.3 # A fast, distributed, high performance gradient boosting (GBDT, GBRT, GBM or MART)
 luigi==2.8.3 # helps you build complex pipelines of batch jobs. It handles dependency resolution, workflow management, visualization etc. It also comes with Hadoop support built in.
-mlflow==0.9.1 # platform for the machine learning lifecycle
+mlflow==1.0.0 # platform for the machine learning lifecycle
 mrcnn # Mask R-CNN for object detection and instance segmentation on Keras and TensorFlow
 newspaper3k==0.2.8 # Article scraping & curation
 numpy-quaternion # adds a quaternion dtype to NumPy
