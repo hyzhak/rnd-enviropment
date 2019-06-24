@@ -3,6 +3,7 @@
 # imageio==2.3.0
 # pyglet==1.2.4
 altair # a declarative statistical visualization
+ax-platform # adaptive experimentation platform
 apache-airflow # a platform to programmatically author, schedule and monitor workflows
 beautifulsoup4==4.7.1
 bokeh
