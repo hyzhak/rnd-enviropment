@@ -33,6 +33,7 @@ regex==2018.01.10 # is required by spacy
 scrapy==1.6.0
 simhash
 surt==0.3.0
+tables # managing hierarchical datasets (HDF5)
 tfx # TensorFlow Extended (TFX) is an end-to-end platform for deploying production ML pipelines
 torchbiggraph # A distributed system to learn embeddings of large graphs
 xgboost==0.81 # Scalable, Portable and Distributed Gradient Boosting (GBDT, GBRT or GBM) Library
