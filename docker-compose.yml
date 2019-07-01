@@ -24,6 +24,7 @@ services:
       - /var/datasets/gensim-data:/root/gensim-data
       # we would store checkpoints and event files here
       - /var/models/:/var/models/
+    restart: always
     runtime: nvidia
 #    user: ${CURRENT_UID}
 
@@ -43,6 +44,7 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8082:8082"
+    restart: always
 #    depends_on:
 #      - db
 #    entrypoint:
@@ -59,9 +61,10 @@ services:
       - MLFLOW_PORT=5000
     volumes:
       - mlflow_artifacts:/artifacts
-      - /var/metrics/mlflow/tracking:/tracking
+      - /var/metrics/hdd/mlflow/tracking:/tracking
     ports:
       - "5000:5000"
+    restart: always
 
   tfboard:
     build:
@@ -76,6 +79,8 @@ services:
 
     volumes:
       - /var/models/:/var/models/
+
+    restart: always
 
 volumes:
   mlflow_artifacts: {}
