@@ -21,7 +21,7 @@ jgraph==0.2.1 # An embeddable webGL graph visualization library.
 gensim==3.7.1 # unsupervised topic modeling and natural language processing
 geopandas==0.4.0
 lightgbm==2.2.3 # A fast, distributed, high performance gradient boosting (GBDT, GBRT, GBM or MART)
-luigi==2.8.3 # helps you build complex pipelines of batch jobs. It handles dependency resolution, workflow management, visualization etc. It also comes with Hadoop support built in.
+luigi==2.8.7 # helps you build complex pipelines of batch jobs. It handles dependency resolution, workflow management, visualization etc. It also comes with Hadoop support built in.
 mlflow==1.0.0 # platform for the machine learning lifecycle
 mrcnn # Mask R-CNN for object detection and instance segmentation on Keras and TensorFlow
 newspaper3k==0.2.8 # Article scraping & curation
@@ -35,6 +35,7 @@ simhash
 surt==0.3.0
 tables # managing hierarchical datasets (HDF5)
 tfx # TensorFlow Extended (TFX) is an end-to-end platform for deploying production ML pipelines
+toml #
 torchbiggraph # A distributed system to learn embeddings of large graphs
 xgboost==0.81 # Scalable, Portable and Distributed Gradient Boosting (GBDT, GBRT or GBM) Library
 
