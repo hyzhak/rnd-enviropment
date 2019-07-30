@@ -28,12 +28,14 @@ newspaper3k==0.2.8 # Article scraping & curation
 numpy-quaternion # adds a quaternion dtype to NumPy
 osmnx==0.9 # Retrieve, construct, analyze, and visualize street networks from OpenStreetMap
 overpass==0.6.1 # overpass api to make db-like queries to open street map data
+Pillow=6.1.0 # The friendly PIL fork (Python Imaging Library)
 pydotplus==2.0.2 # Python interface to Graphviz's Dot language
 regex==2018.01.10 # is required by spacy
 scrapy==1.6.0
 simhash
 surt==0.3.0
 tables # managing hierarchical datasets (HDF5)
+tensorflow-gpu==2.0.0-beta1
 tfx # TensorFlow Extended (TFX) is an end-to-end platform for deploying production ML pipelines
 toml #
 torchbiggraph # A distributed system to learn embeddings of large graphs

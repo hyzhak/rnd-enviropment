@@ -17,13 +17,21 @@ services:
     volumes:
       - mlflow_artifacts:/artifacts
       - .:/opt/notebooks/
-      - /var/datasets/:/var/datasets/
+      # TODO: here could be better way to mount all softlinks
+      - /var/datasets/0:/var/datasets/0
+      - /var/datasets/1:/var/datasets/1
+      - /var/datasets/2:/var/datasets/2
       - ~/.kaggle:/root/.kaggle
+#       we can alter the path by KERAS_HOME
+#      https://github.com/keras-team/keras/blob/master/keras/utils/data_utils.py#L174
+      - /var/models/2/keras:/root/.keras
       # gensim has hardcoded place of its data (pretrained model)
       # https://github.com/RaRe-Technologies/gensim/blob/master/gensim/downloader.py#L66
       - /var/datasets/1/gensim-data:/root/gensim-data
       # we would store checkpoints and event files here
-      - /var/models/:/var/models/
+      # TODO: here could be better way to mount all softlinks
+      - /var/models/1:/var/models/1
+      - /var/models/2:/var/models/2
     restart: always
     runtime: nvidia
 #    user: ${CURRENT_UID}
@@ -78,9 +86,22 @@ services:
       - LOGS_PATH=/var/models/
 
     volumes:
-      - /var/models/:/var/models/
+    # TODO: here could be better way to mount all softlinks
+    - /var/models/1:/var/models/1
+    - /var/models/2:/var/models/2
 
     restart: always
+
+  prometheus_exporter:
+    build:
+      context: prometheus_exporter
+      dockerfile: Dockerfile
+    ports:
+      - "7000:7000"
+#    restart: always
+    runtime: nvidia
+    volumes:
+      - ./prometheus_exporter/src:/go/src/app
 
 volumes:
   mlflow_artifacts: {}
