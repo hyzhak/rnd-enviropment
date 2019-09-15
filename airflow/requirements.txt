@@ -1,0 +1,7 @@
+# TODO: somehow I should merge this file with ../requirements.txt
+# here should be:
+# pytorch with GPU
+# tensorflow with GPU
+# pandas
+# numpy
+# and all common dependencies

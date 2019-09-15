@@ -16,7 +16,7 @@ RUN apk add --no-cache python3-dev libstdc++ && \
     apk add --no-cache --virtual .build-deps g++ && \
     apk add --no-cache --virtual .builddeps gcc gfortran musl-dev && \
     ln -s /usr/include/locale.h /usr/include/xlocale.h && \
-    pip install mlflow && \
+    pip install mlflow==1.2.0 && \
     apk del .builddeps && \
     apk del .build-deps && \
     rm -rf /root/.cache
