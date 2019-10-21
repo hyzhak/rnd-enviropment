@@ -93,16 +93,18 @@ services:
 
     restart: always
 
-  prometheus_exporter:
+  gpu_prometheus_exporter:
     build:
-      context: prometheus_exporter
+      context: gpu_prometheus_exporter
       dockerfile: Dockerfile
+      args:
+        - PORT=9101
     ports:
-      - "7000:7000"
-#    restart: always
+      - "9101:9101"
+    restart: always
     runtime: nvidia
     volumes:
-      - ./prometheus_exporter/src:/go/src/app
+      - ./gpu_prometheus_exporter/src:/go/src/app
 
 volumes:
   mlflow_artifacts: {}

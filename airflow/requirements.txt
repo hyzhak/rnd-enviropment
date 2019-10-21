@@ -5,3 +5,7 @@
 # pandas
 # numpy
 # and all common dependencies
+
+pyarrow # need to be able to store pandas dataframe to parquet file format
+scrapy
+tldextract

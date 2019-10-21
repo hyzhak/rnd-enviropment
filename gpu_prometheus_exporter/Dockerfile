@@ -1,4 +1,4 @@
-FROM nvidia/cuda:9.0-base
+FROM nvidia/cuda:10.1-cudnn7-devel-ubuntu18.04
 
 # gcc for cgo
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -13,6 +13,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 		pkg-config \
 	&& rm -rf /var/lib/apt/lists/*
 
+ARG PORT=9101
 ENV GOLANG_VERSION 1.12.6
 
 RUN set -eux; \
@@ -58,6 +59,11 @@ COPY ./src/ .
 #RUN go get -d -v ./...
 #RUN go install -v ./...
 
-RUN go build -o main .
+RUN go build -o ../bin/main .
 
+EXPOSE ${PORT}
+
+WORKDIR $GOPATH/src/bin
+
+CMD ["ls", "-lah"]
 #CMD ["./main"]
