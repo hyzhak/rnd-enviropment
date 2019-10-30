@@ -29,6 +29,7 @@ numpy-quaternion # adds a quaternion dtype to NumPy
 osmnx==0.9 # Retrieve, construct, analyze, and visualize street networks from OpenStreetMap
 overpass==0.6.1 # overpass api to make db-like queries to open street map data
 Pillow==6.1.0 # The friendly PIL fork (Python Imaging Library)
+psycopg2-binary==2.8.4 # PostgreSQL database adapter for the Python programming language
 pydotplus==2.0.2 # Python interface to Graphviz's Dot language
 pytorch_transformers # A library of state-of-the-art pretrained models for Natural Language Processing (NLP)
 regex==2018.01.10 # is required by spacy
