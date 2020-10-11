@@ -3,12 +3,16 @@
 /competition
 /courses
 /datasets
+/dgraph
 /examples
 /experiments
 /ia
 /interview
 /libs
 /libs-my
+/mlflow
+/mongo
+/prefecthq
 /pytorch
 /rnd
 /venv
