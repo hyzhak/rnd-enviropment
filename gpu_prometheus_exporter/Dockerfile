@@ -1,3 +1,8 @@
+# TODO: use https://docs.docker.com/develop/develop-images/multistage-build/
+# to build first in Go container (https://hub.docker.com/_/golang) and then use
+# FROM nvidia/cuda:10.1-cudnn7-devel-ubuntu18.04
+# for running
+
 FROM nvidia/cuda:10.1-cudnn7-devel-ubuntu18.04
 
 # gcc for cgo

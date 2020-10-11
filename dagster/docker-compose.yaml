@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  dagit:
+    build:
+      context: dagit
+      dockerfile: Dockerfile
+      args:
+        DAGIT_PORT: ${PORT}
+        PYTHON_VERSION: 3.6
+        DAGSTER_VERSION: 0.6.6
+
+    ports:
+    - "${PORT}:${PORT}"
+
+    volumes:
+    - ../:/usr/src/ai

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-set -e
+set -ex
 
-docker-compose down -v
-docker-compose build
-docker-compose up
+time docker-compose down -v || true
+time docker-compose build
+time docker-compose up

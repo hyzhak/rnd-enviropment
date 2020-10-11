@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  novnc:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    environment:
+      NOVNC_PORT: "6080"
+      TARGET_VNC: "http://pytorch:5900"
+
+    networks:
+      - pytorch_my_net
+
+    ports:
+      - "6080:6080"
+
+    restart: always
+
+networks:
+  pytorch_my_net:
+    external: true

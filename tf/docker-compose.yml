@@ -1,0 +1,52 @@
+version: '2.3'
+
+services:
+  tf:
+    build:
+      context: tf
+      dockerfile: Dockerfile
+      args:
+      - PORT=8888
+      - NB_USER=${USER}
+
+    environment:
+      JUPYTER_ENABLE_LAB: "yes"
+      MLFLOW_TRACKING_URI: "http://mlflow_server:5000"
+      NLTK_DATA: "/var/datasets/0/nltk"
+      DAGIT_PORT: 3333
+
+    ports:
+    - "3333:3333"
+    - "8888:8888"
+
+    runtime: nvidia
+
+    volumes:
+    - ../:/home/${USER}/notebooks/
+    # all data sets:
+    - /var/datasets/0:/var/datasets/0
+    - /var/datasets/1:/var/datasets/1
+    - /var/datasets/2:/var/datasets/2
+    - ~/.kaggle:/root/.kaggle
+    #       we can alter the path by KERAS_HOME
+    #      https://github.com/keras-team/keras/blob/master/keras/utils/data_utils.py#L174
+    - /var/models/2/keras:/root/.keras
+    # gensim has hardcoded place of its data (pretrained model)
+    # https://github.com/RaRe-Technologies/gensim/blob/master/gensim/downloader.py#L66
+    - /var/datasets/1/gensim-data:/root/gensim-data
+    # we would store checkpoints and event files here
+    # TODO: here could be better way to mount all softlinks
+    - /var/metrics/1/mlflow/artifacts:/artifacts
+    - /var/models/1:/var/models/1
+    - /var/models/2:/var/models/2
+
+    networks:
+    - luigi-container_my_net
+    - mlflow_my_net
+
+networks:
+  luigi-container_my_net:
+    external: true
+
+  mlflow_my_net:
+    external: true
